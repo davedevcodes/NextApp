@@ -1,8 +1,5 @@
 import React from 'react'
 import '../styles/task.css';
-import {
-    FaCheck,
-  }from 'react-icons/fa';
 
 const Task = () => {
   return (
