@@ -1,6 +1,5 @@
 import React from 'react'
 import '../styles/Info.css';
-import Image from 'next/image';
 import Stopwatch from './StopWatch';
 import { FaWallet } from 'react-icons/fa';
 
