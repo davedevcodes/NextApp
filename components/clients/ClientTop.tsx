@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/ClientTop.css';
-import { FaPaperPlane } from 'react-icons/fa';
 import BillForm from './BillForm';
 import QuoteForm from './QuoteForm';
 
