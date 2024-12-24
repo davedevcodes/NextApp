@@ -94,7 +94,7 @@ const SignupPage = () => {
         <button type="submit">Sign Up</button>
         {error && <p className="error">{error}</p>}
         <p>
-          Already have an account? <a href="/">Login</a>
+          Already have an account? <Link href="/">Login</Link>
         </p>
       </form>
     </div>
