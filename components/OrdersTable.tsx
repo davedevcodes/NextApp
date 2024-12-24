@@ -16,7 +16,7 @@ interface Order {
 const OrdersTable: React.FC = () => {
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  const [error] = useState("");
 
   // Fetch orders from the API
   useEffect(() => {
