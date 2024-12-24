@@ -21,7 +21,7 @@ const ClientOrder = () => {
           },
         });
         const data = await response.json();
-        setBills(data);
+        setOrders(data);
       }
       fetchOrders();
     }, []);
