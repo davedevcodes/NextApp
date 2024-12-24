@@ -1,0 +1,206 @@
+.Nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    border: 2px solid #3d3d3d67;
+    width: 130px;
+    height: 50px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.logo h1{
+    font-size: 30px;
+}
+
+.navLinks{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+    0 1px 3px rgba(0, 0, 0, 0.06);
+}
+.navLinks .Links{
+    padding: 13px;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    border: none;
+    min-width: 130px;
+}
+
+.Links:active{
+    color: #fff;
+    background-color: #000;
+    transition: 0.3s;
+}
+
+.navRight{
+    display: flex;
+    width: fit-content;
+    gap: 20px;
+    align-items: center;
+    
+}
+.setting{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+    0 1px 3px rgba(0, 0, 0, 0.06);
+}
+.setting:hover{
+    background-color: #000;
+    color: #fff;
+    transition: 0.3s;
+}
+.switch{
+    padding: 15px 16px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+    0 1px 3px rgba(0, 0, 0, 0.06);
+}
+.switch:hover{
+    background-color: #000;
+    color: #fff;
+    transition: 0.3s;
+}
+.acc{
+    padding: 15px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+    0 1px 3px rgba(0, 0, 0, 0.06);
+}
+.acc:hover{
+    background-color: #000;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.FontAwesomeIcon{
+    width: 20px;
+    height: 20px;
+}
+
+/* Dropdown container */
+.acc-container {
+    position: relative; /* Needed to position the dropdown relative to the parent */
+    display: inline-block;
+  }
+  
+  /* Dropdown menu styling */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%; /* Align below the button */
+    right: 0; /* Align to the right */
+    background: rgba(255, 255, 255, 0.9); /* Glassy white background */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 10;
+    width: 150px; /* Adjust width if needed */
+    padding: 0.5rem 0;
+  }
+  .dark .dropdown-menu{
+    background: rgb(15, 15, 15);
+  }
+  
+  /* Individual dropdown items */
+  .dropdown-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .dark .dropdown-item{
+    color: #fff;
+  }
+  
+  /* Dropdown item hover effects */
+  .dropdown-item:hover {
+    background-color: #000;
+    color: #fff; /* White text on hover */
+    border-radius: 4px;
+  }
+  
+  /* Dropdown fade-in animation */
+  .dropdown-menu {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: dropdownFadeIn 0.3s forwards;
+  }
+  
+  @keyframes dropdownFadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+
+
+/* navBar.css */
+
+/* Light mode styles */
+.Nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    /* background-color: #fff1f1; */
+    color: #000000;
+    border-radius: 60px;
+  }
+  
+  /* Dark mode styles */
+
+  .dark .Nav {
+    background-color: #111827;
+    color: #ffffff;
+  }
+  
+  .Links {
+    text-decoration: none;
+    margin: 0 1rem;
+    color: inherit;
+  }
+  
+  .navRight button.switch {
+    /* background: none; */
+    border: none;
+    cursor: pointer;
+    /* color: #fff; */
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  

@@ -1,0 +1,99 @@
+.Tasks{
+    width: 24vw;
+    height: fit-content;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    gap: 17px;
+    display: flex;
+    flex-direction: column;
+}
+.dark .Tasks{
+    background: #111827;
+    color: #ffffff;
+  }
+.rightTop{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.rightTop h2{
+    font-size: 25px;
+}
+.rightTop span{
+    font-size: 25px;
+}
+.rightBottom{
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 80vh;
+}
+.dark .rightBottom{
+    background: #141414;
+    color: #ffffff;
+  }
+
+.rightBottom span{
+    font-size: 20px;
+}
+.rightBottom ul{
+    padding: 20px;
+    gap: 10px;
+}
+.rightBottom ul li::marker{
+    font-size: 20px;
+    color: #fff;
+}
+.rightBottom ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.rightBottom ul li p{
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.rightBottom ul li input[type="checkbox"] {
+    /* Hide default checkbox */
+    appearance: none; /* Modern browsers */
+    -webkit-appearance: none; /* Safari */
+    -moz-appearance: none; /* Firefox */
+    width: 23px;
+    height: 23px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #ccc; /* Border styling */
+    cursor: pointer; /* Change cursor to pointer */
+  
+    /* Add transition for hover and click effects */
+    transition: all 0.3s ease;
+  }
+  
+  .rightBottom ul li input[type="checkbox"]:checked {
+    /* Checked state styling */
+    background-color: #000;
+    border-color: #000;
+    position: relative;
+  }
+  
+  .rightBottom ul li input[type="checkbox"]:checked::after {
+    /* Add a checkmark for the checked state */
+    content: '✔'; /* Unicode checkmark */
+    font-size: 14px;
+    color: #fff; /* White checkmark color */
+    position: absolute;
+    top: -1;
+    left: 4px;
+  }
+  

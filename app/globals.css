@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: linear-gradient(to bottom right, #fff1f1, #c5e2fa);
+  --foreground: #000000;
+}
+body {
+  padding: 1rem;
+  height: 100%;
+  color: var(--foreground);
+  background-repeat: no-repeat;  /* Ensures the background does not repeat */
+  background-size: cover;        /* Ensures the background stretches to cover the whole viewport */
+  background: var(--background);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dark body {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+
+

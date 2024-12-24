@@ -1,0 +1,69 @@
+.info{
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+.info .box{
+    max-width: 300px;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 30px;
+    overflow: hidden;
+}
+.box span{
+    color: #000;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 25px;
+}
+.dark .box span{
+    color: #fff;
+
+}
+.box h1{
+    position: relative;
+    top: 30px;
+    font-size: 50px;
+    color: #000;
+}
+.dark .box h1{
+    color: #fff;
+}
+.dark .info .box{
+    background: #111827;
+    color: #ffffff;
+}
+.box .title{
+    position: relative;
+    top: 70%;
+    color: #fff;
+    width: 100%;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+    0 1px 3px rgba(0, 0, 0, 0.06);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.title h2{
+    font-size: 25px;
+}
+.title span{
+    font-size: 19px;
+}
+.tTracker{
+    font-size: 19px;
+    position: relative;
+    top: 10px;
+    left: 33%;
+    text-transform: capitalize;
+}

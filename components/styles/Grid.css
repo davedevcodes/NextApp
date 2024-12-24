@@ -1,0 +1,8 @@
+.left{
+    width: 70vw;
+    height: 100%;
+    padding: 10px 60px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}

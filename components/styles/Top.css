@@ -1,0 +1,49 @@
+.top{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 50px;
+    padding: 0 50px;
+}
+
+.set{
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    cursor: pointer;
+    height: 120px;
+    width: 150px;
+    align-items: flex-end;
+}
+.set:hover{
+    background-color: #111827;
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+}
+.dark .set{
+    background-color: #111827;
+    color: #ffffff;
+}
+
+.set h2{
+    font-size: 30px;
+    display: flex;
+    justify-self: flex-end;
+}
+.set span{
+    font-size: 18px;
+}
+
+.greeting{
+    font-size: 60px;
+}
+
+.topRight{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}

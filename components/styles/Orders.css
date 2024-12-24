@@ -1,0 +1,92 @@
+.navLinks #orders{
+    color: #fff;
+    background-color: #000;
+}
+
+
+
+/* Overlay styling */
+.update-order-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+  }
+  
+  /* Modal styling */
+  .update-order-modal {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+  }
+  
+  /* Title styling */
+  .update-order-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-label {
+    display: block;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Error message */
+  .form-error {
+    color: #e53e3e;
+    font-size: 0.875rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Form actions */
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-cancel {
+    background-color: #6b7280;
+    color: #fff;
+  }
+  
+  .btn-cancel:hover {
+    background-color: #4b5563;
+  }
+  
+  .btn-submit {
+    background-color: #2563eb;
+    color: #fff;
+  }
+  
+  .btn-submit:hover {
+    background-color: #1d4ed8;
+  }
+  
