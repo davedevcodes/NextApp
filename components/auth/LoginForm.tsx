@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from 'next/link';
 
-
 const LoginPage = () => {
   const router = useRouter();
   const [formData, setFormData] = useState({
@@ -95,7 +94,7 @@ const LoginPage = () => {
         <button type="submit">Login</button>
         {error && <p className="error">{error}</p>}
         <p>
-          Don't have an account? <Link href="/Signup">Sign up</Link>
+          Don&apos;t have an account? <Link href="/Signup">Sign up</Link>
         </p>
       </form>
     </div>
