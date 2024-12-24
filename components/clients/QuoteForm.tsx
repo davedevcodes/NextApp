@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { FaPaperPlane } from 'react-icons/fa';
-import { FaTimes } from 'react-icons/fa';
-import '../styles/quoteform.css'
+import { FaPaperPlane, FaTimes } from 'react-icons/fa';
+import '../styles/quoteform.css';
 
 const QuoteForm = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -30,7 +29,7 @@ const QuoteForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
+      await axios.post(
         'https://mesh-1-1.onrender.com/mesh/api/quotes',
         formData,
         {
@@ -67,7 +66,7 @@ const QuoteForm = () => {
             <h2>Create a Quote</h2>
             <form onSubmit={handleSubmit} className="quote-form">
               <div>
-                <label htmlFor="clientId" className='Label' >Client ID</label>
+                <label htmlFor="clientId" className="Label">Client ID</label>
                 <input
                   type="number"
                   id="clientId"
@@ -78,7 +77,7 @@ const QuoteForm = () => {
                 />
               </div>
               <div>
-                <label htmlFor="propertyDetails" className='Label'>Property Details</label>
+                <label htmlFor="propertyDetails" className="Label">Property Details</label>
                 <textarea
                   id="propertyDetails"
                   name="propertyDetails"
@@ -88,7 +87,7 @@ const QuoteForm = () => {
                 />
               </div>
               <div>
-                <label htmlFor="additionalNotes" className='Label'>Additional Notes</label>
+                <label htmlFor="additionalNotes" className="Label">Additional Notes</label>
                 <textarea
                   id="additionalNotes"
                   name="additionalNotes"
@@ -97,7 +96,7 @@ const QuoteForm = () => {
                 />
               </div>
               <div>
-                <label htmlFor="description" className='Label'>Description</label>
+                <label htmlFor="description" className="Label">Description</label>
                 <textarea
                   id="description"
                   name="description"
