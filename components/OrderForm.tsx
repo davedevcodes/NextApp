@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState } from "react";
-import './styles/orders.css'
+
 
 
 interface UpdateOrderFormProps {
