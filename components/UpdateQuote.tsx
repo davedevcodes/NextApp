@@ -44,11 +44,15 @@ const UpdateQuoteForm: React.FC<UpdateQuoteFormProps> = ({ quoteId }) => {
       console.log("Response:", response); // Debug log
       setStatusMessage('Quote updated successfully!');
       setFormData({ status: '', propertyDetails: '', additionalNotes: '', description: '' });
-    } catch (error: any) {
-      console.error("Error during API call:", error.response || error); // Debug log
-      setStatusMessage('Failed to update the quote.');
-    }
-  };
+    } catch (error: unknown) {
+  if (error instanceof Error) {
+    console.error("Error during API call:", error.message); // Debug log
+  } else {
+    console.error("Unknown error during API call:", error); // Handle unexpected error types
+  }
+  setStatusMessage('Failed to update the quote.');
+};
+
 
   return (
     <div>
