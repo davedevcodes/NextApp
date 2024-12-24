@@ -29,38 +29,43 @@ const UpdateQuoteForm: React.FC<UpdateQuoteFormProps> = ({ quoteId }) => {
   // Submit the form data to the API
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form data being sent:", formData); // Debug log
+    console.log('Form data being sent:', formData); // Debug log
+
     try {
       const response = await axios.put(
         `https://mesh-1-1.onrender.com/mesh/api/mesh/quotes/${quoteId}`,
         formData,
         {
           headers: {
-            Authorization: `Bearer 2006`,
+            Authorization: `Bearer 2006`, // Consider storing this token in an environment variable
           },
         }
       );
 
-      console.log("Response:", response); // Debug log
+      console.log('Response:', response); // Debug log
       setStatusMessage('Quote updated successfully!');
       setFormData({ status: '', propertyDetails: '', additionalNotes: '', description: '' });
     } catch (error: unknown) {
-  if (error instanceof Error) {
-    console.error("Error during API call:", error.message); // Debug log
-  } else {
-    console.error("Unknown error during API call:", error); // Handle unexpected error types
-  }
-  setStatusMessage('Failed to update the quote.');
-};
-
+      if (axios.isAxiosError(error)) {
+        console.error('Error during API call:', error.response?.data || error.message);
+      } else if (error instanceof Error) {
+        console.error('Unexpected error during API call:', error.message);
+      } else {
+        console.error('Unknown error during API call:', error);
+      }
+      setStatusMessage('Failed to update the quote.');
+    }
+  };
 
   return (
     <div>
-      <button onClick={toggleModal}>View</button>
+      <button onClick={toggleModal} aria-expanded={isModalOpen}>
+        View
+      </button>
       {isModalOpen && (
-        <div className="modal">
+        <div className="modal" role="dialog" aria-labelledby="update-quote-title" aria-hidden={!isModalOpen}>
           <div className="modal-content">
-            <h2>Update Quote</h2>
+            <h2 id="update-quote-title">Update Quote</h2>
             <form onSubmit={handleSubmit} className="update-quote-form">
               <div>
                 <label htmlFor="status">Status</label>
@@ -109,7 +114,7 @@ const UpdateQuoteForm: React.FC<UpdateQuoteFormProps> = ({ quoteId }) => {
               </button>
             </form>
             {statusMessage && <p>{statusMessage}</p>}
-            <button className="close-btn" onClick={toggleModal}>
+            <button className="close-btn" onClick={toggleModal} aria-label="Close modal">
               Close
             </button>
           </div>
