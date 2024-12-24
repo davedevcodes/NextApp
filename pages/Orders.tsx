@@ -7,24 +7,23 @@ import Top from '@/components/main/Top';
 import '../app/globals.css';
 import '../components/styles/Orders.css'
 import OrdersTable from '@/components/OrdersTable';
-import UpdateOrderButton from '@/components/UpdateFormBtn';
 
 const Orders = () => {
 
-    const [bills, setBills] = useState([]);
+    const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-      async function fetchBills() {
+      async function fetchOrders() {
         const token = '2006'; // Your Bearer Token
-        const response = await fetch('https://mesh-1-1.onrender.com/api/bills', {
+        const response = await fetch('https://mesh-1-1.onrender.com/api/orders', {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
         });
         const data = await response.json();
-        setBills(data);
+        setOrders(data);
       }
-      fetchBills();
+      fetchOrders();
     }, []);
 
   return (
