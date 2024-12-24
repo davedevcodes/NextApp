@@ -31,12 +31,6 @@ const NavBar = () => {
             <Link href="/Home" className="Links" id="home">
             Home
             </Link>
-            <Link href="/RequestPage"
-            className="Links"
-             id="dashboard"
-            >
-            Quotes
-            </Link>
             <Link href="/Bills" className="Links"
              id="bill"
             >Bills</Link>
