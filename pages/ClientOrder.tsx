@@ -1,5 +1,5 @@
 import React from 'react'
-import { ThemeProvider, useTheme } from '../context/ThemeContext'
+import { ThemeProvider } from '../context/ThemeContext'
 import { useEffect, useState } from 'react';
 import ClientNavBar from "@/components/clients/ClientNavBar";
 import Footer from "../components/Footer";
@@ -10,12 +10,12 @@ import '@/components/styles/Orders.css';
 
 const ClientOrder = () => {
 
-    const [bills, setBills] = useState([]);
+    const [orderss, setOrders] = useState([]);
 
     useEffect(() => {
-      async function fetchBills() {
+      async function fetchOrders() {
         const token = '2006'; // Your Bearer Token
-        const response = await fetch('https://mesh-1-1.onrender.com/api/bills', {
+        const response = await fetch('https://mesh-1-1.onrender.com/api/orders', {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
@@ -23,7 +23,7 @@ const ClientOrder = () => {
         const data = await response.json();
         setBills(data);
       }
-      fetchBills();
+      fetchOrders();
     }, []);
 
   return (
