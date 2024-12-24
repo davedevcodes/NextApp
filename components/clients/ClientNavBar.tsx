@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 // import React from 'react';
 import Link from 'next/link';
 import '../styles/navBar.css';
@@ -9,9 +9,7 @@ import {
  } from 'react-icons/fa';
  import { useTheme } from "../../context/ThemeContext";
 
- interface NavLinksProps {
-  linkId: string;  // The id that will be dynamically assigned
-}
+
 
 const ClientNavBar = () => {
 
@@ -59,9 +57,9 @@ const ClientNavBar = () => {
         </button>
         {isDropdownVisible && (
           <div className="dropdown-menu">
-            <a href="/profile" className="dropdown-item">Profile</a>
-            <a href="/settings" className="dropdown-item">Settings</a>
-            <a href="/" className="dropdown-item">Logout</a>
+            <Link href="/profile" className="dropdown-item">Profile</Link>
+            <Link href="/settings" className="dropdown-item">Settings</Link>
+            <Link href="/" className="dropdown-item">Logout</Link>
           </div>
         )}
       </div>
