@@ -5,7 +5,7 @@ import Top from '@/components/main/Top';
 import Table from '@/components/requests/Table';
 import Footer from '@/components/Footer';
 import '../app/globals.css';
-import '../components/styles/request.css';
+import '../components/styles/home.css';
 
 const RequestPage = () => {
 
