@@ -3,8 +3,6 @@
 
 import React, { useState } from "react";
 
-
-
 interface UpdateOrderFormProps {
   orderId: number; // ID of the order to update
   onClose: () => void; // Function to close the form
@@ -23,11 +21,11 @@ const UpdateOrderForm: React.FC<UpdateOrderFormProps> = ({ orderId, onClose, onS
     setLoading(true);
 
     try {
-      const response = await fetch(`https://mesh-1-1.onrender.com/mesh/api/mesh/orders/{orderId}`, {
+      const response = await fetch(`https://mesh-1-1.onrender.com/mesh/api/mesh/orders/${orderId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer 2006`,
+          Authorization: `Bearer 2006`, // Ideally, move this token to environment variables
         },
         body: JSON.stringify({
           status,
@@ -43,7 +41,7 @@ const UpdateOrderForm: React.FC<UpdateOrderFormProps> = ({ orderId, onClose, onS
         const errorData = await response.json();
         setError(errorData.message || "Failed to update order.");
       }
-    } catch (err) {
+    } catch {
       setError("An unexpected error occurred. Please try again.");
     } finally {
       setLoading(false);
