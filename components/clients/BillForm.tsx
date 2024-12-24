@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { FaFileInvoice } from 'react-icons/fa';
-import { FaTimes } from 'react-icons/fa';
-import '../styles/billform.css'
+import { FaFileInvoice, FaTimes } from 'react-icons/fa';
+import '../styles/billform.css';
 
 const BillForm = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -30,7 +29,7 @@ const BillForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
+      await axios.post(
         'https://mesh-1-1.onrender.com/mesh/api/bills',
         formData,
         {
@@ -62,12 +61,12 @@ const BillForm = () => {
       {isModalOpen && (
         <div className="modal">
           <div className="modal-content">
-            <h2 className='head'>Create a Bill</h2>
+            <h2 className="head">Create a Bill</h2>
             <form onSubmit={handleSubmit} className="bill-form">
               <div>
-                <label htmlFor="orderId" className='Label'>Order ID</label>
+                <label htmlFor="orderId" className="Label">Order ID</label>
                 <input
-                  className='input'
+                  className="input"
                   type="number"
                   id="orderId"
                   name="orderId"
@@ -77,9 +76,9 @@ const BillForm = () => {
                 />
               </div>
               <div>
-                <label htmlFor="amount" className='Label'>Amount</label>
+                <label htmlFor="amount" className="Label">Amount</label>
                 <input
-                className='input'
+                  className="input"
                   type="number"
                   id="amount"
                   name="amount"
@@ -90,9 +89,9 @@ const BillForm = () => {
                 />
               </div>
               <div>
-                <label htmlFor="dueDate" className='Label'>Due Date</label>
+                <label htmlFor="dueDate" className="Label">Due Date</label>
                 <input
-                className='input'
+                  className="input"
                   type="date"
                   id="dueDate"
                   name="dueDate"
@@ -102,9 +101,9 @@ const BillForm = () => {
                 />
               </div>
               <div>
-                <label htmlFor="description" className='Label'>Description</label>
+                <label htmlFor="description" className="Label">Description</label>
                 <textarea
-                className='input'
+                  className="input"
                   id="description"
                   name="description"
                   value={formData.description}
