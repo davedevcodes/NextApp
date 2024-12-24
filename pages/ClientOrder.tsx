@@ -10,7 +10,7 @@ import '@/components/styles/Orders.css';
 
 const ClientOrder = () => {
 
-    const [orderss, setOrders] = useState([]);
+    const [ setOrders] = useState([]);
 
     useEffect(() => {
       async function fetchOrders() {
