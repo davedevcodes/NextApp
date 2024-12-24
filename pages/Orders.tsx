@@ -10,7 +10,7 @@ import OrdersTable from '@/components/OrdersTable';
 
 const Orders = () => {
 
-    const [orders, setOrders] = useState([]);
+    const [ setOrders] = useState([]);
 
     useEffect(() => {
       async function fetchOrders() {
